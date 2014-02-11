@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoUpload</key>
+	<true/>
+	<key>deleteAfterUpload</key>
+	<false/>
+	<key>copyLink</key>
+	<true/>
+	<key>playSound</key>
+	<true/>
+	<key>soundFile</key>
+	<string>Glass</string>
+	<key>launchLogin</key>
+	<true/>
+	<key>UploadClipboardStashKey</key>
+	<data>YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1vZGlmaWVyRmxhZ3MQIIACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzW01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDFAAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=</data>
+	<key>TakeScreenshotStashKey</key>
+	<data>YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1vZGlmaWVyRmxhZ3MQF4ACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzW01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDFAAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=</data>
+	<key>DisableUploadsStashKey</key>
+	<data>YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1vZGlmaWVyRmxhZ3MQAoACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzW01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDFAAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=</data>
+	<key>showNotification</key>
+	<true/>
+</dict>
+</plist>
