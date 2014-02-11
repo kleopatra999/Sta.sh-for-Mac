@@ -2,7 +2,7 @@
 
 ## How To Get Started
 
-* Run pod install to initialize the requried dependencies for the project to run.
+* Run pod install to initialize the required dependencies for the project to run.
 * Download the app and insert your credentials where needed. If you wish, remove HockeyApp and Sparkle to make this process easier.
 * Questions? Post an issue!
 
