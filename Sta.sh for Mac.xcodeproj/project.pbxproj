@@ -598,10 +598,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/aaron/Documents/deviantART/Sta.sh\\ for\\ Mac/Sta.sh\\ for\\ Mac",
+					"\"${SRCROOT}\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sta.sh for Mac/Sta.sh for Mac-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/deviantART-SDK\"",
+				);
 				INFOPLIST_FILE = "Sta.sh for Mac/Sta.sh for Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,10 +625,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/aaron/Documents/deviantART/Sta.sh\\ for\\ Mac/Sta.sh\\ for\\ Mac",
+					"\"${SRCROOT}\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sta.sh for Mac/Sta.sh for Mac-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/deviantART-SDK\"",
+				);
 				INFOPLIST_FILE = "Sta.sh for Mac/Sta.sh for Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
