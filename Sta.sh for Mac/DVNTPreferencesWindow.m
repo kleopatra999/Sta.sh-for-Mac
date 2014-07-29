@@ -267,7 +267,7 @@
     self.currentViewTag = 1;
     
     // resize the window as needed
-    [self resizeWindow:360];
+    [self resizeWindow:400];
     
     // upload clipboard label
     NSTextField *clipboardLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-130, 180, 30)];
@@ -299,8 +299,24 @@
     screenshotShortCutView.associatedUserDefaultsKey = @"TakeScreenshotStashKey";
     [self.contentView addSubview:screenshotShortCutView];
     
+    // take screenshot label
+    NSTextField *disableUploadLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-210, 180, 30)];
+    [disableUploadLabel setStringValue:@"Disable Upload:"];
+    [disableUploadLabel setEditable:NO];
+    [disableUploadLabel setBezeled:NO];
+    [disableUploadLabel setBackgroundColor:[NSColor clearColor]];
+    [disableUploadLabel setAlignment:kCTTextAlignmentRight];
+    [disableUploadLabel setFont:[NSFont systemFontOfSize:13]];
+    [self.contentView addSubview:disableUploadLabel];
+    
+    // shortcut view for said shortcut, allows easy shortcut creation
+    MASShortcutView *disableUploadShortCutView = [[MASShortcutView alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-200, 100, 19)];
+    disableUploadShortCutView.associatedUserDefaultsKey = @"DisableUploadsStashKey";
+    [self.contentView addSubview:disableUploadShortCutView];
+
+    
     // uploading label
-    NSTextField *uploadingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-210, 180, 30)];
+    NSTextField *uploadingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-245, 180, 30)];
     [uploadingLabel setStringValue:@"Uploading:"];
     [uploadingLabel setEditable:NO];
     [uploadingLabel setBezeled:NO];
@@ -310,7 +326,7 @@
     [self.contentView addSubview:uploadingLabel];
     
     // check button for uploading screenshots automatically
-    NSButton *uploadScreenshots = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-205, 250, 30)];
+    NSButton *uploadScreenshots = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-240, 250, 30)];
     [uploadScreenshots setButtonType:NSSwitchButton];
     [uploadScreenshots setTitle:@"Upload screenshots automatically"];
     [uploadScreenshots setAction:@selector(toggleAutoUpload:)];
@@ -318,7 +334,7 @@
     [self.contentView addSubview:uploadScreenshots];
     
     // check button for deleting screenshots after upload
-    NSButton *deleteScreenshots = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-230, 250, 30)];
+    NSButton *deleteScreenshots = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-265, 250, 30)];
     [deleteScreenshots setButtonType:NSSwitchButton];
     [deleteScreenshots setTitle:@"Delete screenshots after upload"];
     [deleteScreenshots setAction:@selector(toggleDeleteAfterUpload:)];
@@ -326,7 +342,7 @@
     [self.contentView addSubview:deleteScreenshots];
     
     // after stashing label
-    NSTextField *stashingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-270, 180, 30)];
+    NSTextField *stashingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-305, 180, 30)];
     [stashingLabel setStringValue:@"After stashing:"];
     [stashingLabel setEditable:NO];
     [stashingLabel setBezeled:NO];
@@ -336,7 +352,7 @@
     [self.contentView addSubview:stashingLabel];
     
     // cehck button for copying the link after upload
-    NSButton *copyLink = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-265, 250, 30)];
+    NSButton *copyLink = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-300, 250, 30)];
     [copyLink setButtonType:NSSwitchButton];
     [copyLink setAction:@selector(toggleCopyLink:)];
     [copyLink setTitle:@"Automatically copy link to clipboard"];
@@ -344,7 +360,7 @@
     [self.contentView addSubview:copyLink];
     
     // check button for showing a notification in notification center after upload
-    NSButton *showNotification = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-290, 250, 30)];
+    NSButton *showNotification = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-325, 250, 30)];
     [showNotification setButtonType:NSSwitchButton];
     [showNotification setAction:@selector(toggleShowNotification:)];
     [showNotification setTitle:@"Show notification"];
@@ -352,7 +368,7 @@
     [self.contentView addSubview:showNotification];
     
     // check button for playing sound on successful upload
-    NSButton *playSound = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-315, 250, 30)];
+    NSButton *playSound = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-350, 250, 30)];
     [playSound setButtonType:NSSwitchButton];
     [playSound setTitle:@"Play"];
     [playSound setAction:@selector(toggleSound:)];
@@ -363,7 +379,7 @@
     NSArray *sounds = @[@"Basso", @"Blow", @"Bottle", @"Frog", @"Funk", @"Glass", @"Hero", @"Morse", @"Ping", @"Pop", @"Purr", @"Sosumi", @"Submarine", @"Tink"];
     
     // pop up menu for selecting sound to play on upload
-    NSPopUpButton *soundMenu = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(245, self.frame.size.height-315, 80, 30) pullsDown:NO];
+    NSPopUpButton *soundMenu = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(245, self.frame.size.height-350, 80, 30) pullsDown:NO];
     [soundMenu setAction:@selector(changedSound:)];
     [soundMenu addItemsWithTitles:sounds];
     
@@ -375,7 +391,7 @@
     [self.contentView addSubview:soundMenu];
     
     // startup options label
-    NSTextField *startupLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-355, 180, 30)];
+    NSTextField *startupLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, self.frame.size.height-390, 180, 30)];
     [startupLabel setStringValue:@"Startup:"];
     [startupLabel setEditable:NO];
     [startupLabel setBezeled:NO];
@@ -385,7 +401,7 @@
     [self.contentView addSubview:startupLabel];
     
     // check button to launch the app on login or not
-    NSButton *launchLogin = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-350, 250, 30)];
+    NSButton *launchLogin = [[NSButton alloc] initWithFrame:NSMakeRect(195, self.frame.size.height-385, 250, 30)];
     [launchLogin setButtonType:NSSwitchButton];
     [launchLogin setTitle:@"Launch at login"];
     [launchLogin setAction:@selector(toggleLaunchLogin:)];
